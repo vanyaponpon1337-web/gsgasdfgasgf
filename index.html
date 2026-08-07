@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Установка CounterFlame</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #1c1c1e;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 20px;
+    }
+    .card {
+        background: #2c2c2e;
+        border-radius: 20px;
+        padding: 40px 30px;
+        max-width: 360px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    h1 {
+        font-size: 22px;
+        margin-bottom: 6px;
+    }
+    p.version {
+        color: #8e8e93;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .btn {
+        display: inline-block;
+        width: 100%;
+        padding: 14px 0;
+        background: #0a84ff;
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        border-radius: 12px;
+        transition: opacity 0.2s;
+    }
+    .btn:active {
+        opacity: 0.7;
+    }
+    .hint {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #636366;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>CounterFlame</h1>
+    <p class="version">Версия 1.1.5</p>
+    <a class="btn" id="installBtn" href="itms-services://?action=download-manifest&url=https://autopark.xsph.ru/manifest.plist">
+        Установить
+    </a>
+    <p class="hint">Установка доступна только с устройства iOS через Safari</p>
+</div>
+
+<script>
+    // Автоматический запуск установки при открытии страницы
+    window.onload = function() {
+        window.location.href = "itms-services://?action=download-manifest&url=https://autopark.xsph.ru/manifest.plist";
+    };
+</script>
+
+</body>
+</html>
